@@ -1,0 +1,15 @@
+query MessageReceiverQuery($id: Int!) {
+    user(id: $id) {
+        id
+        firstName
+        secondName
+        __typename
+        identicon
+        profileType
+        gender
+        active
+        photo {
+            filename
+        }
+    }
+}

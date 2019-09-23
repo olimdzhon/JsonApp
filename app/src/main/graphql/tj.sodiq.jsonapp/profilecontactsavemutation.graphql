@@ -1,0 +1,9 @@
+mutation ProfileContactSaveMutation($contacts: [ProfileContactSaveArgs], $removeContactIds: [Int]) {
+    profileContacts: profileContactSave(contacts: $contacts) {
+        id
+        contactType
+        valueType
+        value
+    }
+    profileContactBulkDelete(removeContactIds: $removeContactIds)
+}

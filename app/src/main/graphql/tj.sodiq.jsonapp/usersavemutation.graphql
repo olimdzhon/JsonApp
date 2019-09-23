@@ -1,0 +1,16 @@
+mutation UserSaveMutation($profileSaveArgs: ProfileSaveArgs, $userUpdateArgs: UserUpdateArgs!) {
+    userUpdate: userUpdate(user: $userUpdateArgs) {
+        name
+        firstName
+        secondName
+        middleName
+    }
+    profile: profile(profileSaveArgs: $profileSaveArgs) {
+        id
+        specializations {
+            id
+            name
+            __typename
+        }
+    }
+}

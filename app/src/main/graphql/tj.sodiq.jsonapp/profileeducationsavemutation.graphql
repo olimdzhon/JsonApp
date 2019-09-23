@@ -1,0 +1,18 @@
+mutation ProfileEducationSaveMutation($educations: [ProfileEducationSaveArgs],$removeEducationIds: [Int] ) {
+    profileEducations: profileEducationSave(educations: $educations) {
+        id
+        dateFrom
+        dateTo
+        tillNow
+        description
+        field
+        organization
+        attachFile {
+            id
+            name
+            filename
+            fileType
+        }
+    }
+    profileEducationBulkDelete(removeEducationIds: $removeEducationIds)
+}

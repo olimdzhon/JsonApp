@@ -1,0 +1,13 @@
+ mutation PatientPostSaveMutation($patientPost: PatientPostSaveArgs) {
+    patientPost: patientPostSave(patientPost: $patientPost) {
+        id
+        name
+        text
+        tags {
+            id
+            name
+            conceptId
+            conceptType
+        }
+    }
+}

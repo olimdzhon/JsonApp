@@ -1,0 +1,8 @@
+mutation ProfileLanguageSaveMutation($languages: [ProfileLanguageSaveArgs], $removeLanguageIds: [Int]) {
+    profileLanguages: profileLanguageSave(languages: $languages) {
+        id
+        level
+        code
+    }
+    profileLanguageBulkDelete(removeLanguageIds: $removeLanguageIds)
+}

@@ -1,0 +1,35 @@
+mutation MessageSaveMutation($message: MessageDraft!, $attachFiles: [AttachFileDraft]) {
+    message: messageSave(message: $message, attachFiles: $attachFiles) {
+        id
+        createdDate
+        text
+        status
+        ownerId
+        receiverId
+        isSender
+        owner {
+            id
+            identicon
+            profileType
+            gender
+            active
+            photo {
+                filename
+            }
+        }
+        receiver {
+            id
+            identicon
+            profileType
+            gender
+            active
+            photo {
+                filename
+            }
+        }
+        attachFiles {
+            filename
+            fileType
+        }
+    }
+}

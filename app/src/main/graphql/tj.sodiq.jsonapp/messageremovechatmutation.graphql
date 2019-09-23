@@ -1,0 +1,3 @@
+mutation MessageRemoveChatMutation($userId: Int!) {
+    messageRemoveChat(userId: $userId)
+}

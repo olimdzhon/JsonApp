@@ -1,0 +1,3 @@
+mutation PaperDeleteMutation($id: Int) {
+    paperDelete(id: $id)
+}

@@ -1,0 +1,3 @@
+mutation ProfileCropMutation($crop: Crop) {
+    profileCrop(crop: $crop)
+}

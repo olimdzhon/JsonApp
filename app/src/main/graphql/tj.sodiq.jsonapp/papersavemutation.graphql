@@ -1,0 +1,18 @@
+mutation PaperSaveMutation($paper: PaperSaveArgs, $attachFile: AttachFileDraft) {
+    paper: paperSave(paper: $paper, attachFile: $attachFile) {
+        id
+        name
+        paperType
+        publishYear
+        publishMonth
+        publishDay
+        annotation
+        paperAuthors
+        tags {
+            id
+            name
+            conceptId
+            conceptType
+        }
+    }
+}

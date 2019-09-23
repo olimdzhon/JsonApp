@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main2Activity">
+
+        <RelativeLayout
+            android:id="@+id/rl_aboutEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:padding="10dp">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:textColor="#000"
+                android:id="@+id/input" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_aboutBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@id/rl_aboutEdit">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сохранить"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@+id/action_cancel"
+                android:layout_marginRight="10dp"
+                android:textSize="14sp"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:id="@+id/action_ok"
+                android:background="@drawable/btn_verify"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Отмена"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:textAlignment="center"
+                android:id="@+id/action_cancel"
+                android:background="@drawable/btn_edit"/>
+
+        </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,7 @@
+mutation ProfileAchievementSaveMutation($achievements: [ProfileAchievementSaveArgs], $removeAchievementIds: [Int]) {
+    profileAchievementSave: profileAchievementSave(achievements: $achievements) {
+        id
+        name
+    }
+    profileAchievementBulkDelete(removeAchievementIds: $removeAchievementIds)
+}

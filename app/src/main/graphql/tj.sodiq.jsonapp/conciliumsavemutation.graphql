@@ -1,0 +1,13 @@
+mutation ConciliumSaveMutation($concilium: ConciliumSaveArgs) {
+    concilium: conciliumSave(concilium: $concilium) {
+        id
+        name
+        text
+        tags {
+            id
+            name
+            conceptId
+            conceptType
+        }
+    }
+}

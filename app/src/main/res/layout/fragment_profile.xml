@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FragmentProfile">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/basic_data"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="14dp"
+                android:background="@drawable/basic_data"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/userPhotoProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="8dp" />
+
+                <android.support.design.widget.FloatingActionButton
+                    android:id="@+id/fab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/userPhotoProfile"
+                    android:layout_toRightOf="@+id/userPhotoProfile"
+                    android:src="@android:drawable/ic_input_add"
+                    app:backgroundTint="@android:color/background_light"
+                    app:fabCustomSize="@dimen/activity_vertical_margin"
+                    app:fabSize="mini" />
+
+                <TextView
+                    android:id="@+id/userNameProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userPhotoProfile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/userSpecializationProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userNameProfile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@android:color/holo_blue_light" />
+
+                <TextView
+                    android:id="@+id/userCountryProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userSpecializationProfile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="8dp" />
+
+                <ImageView
+                    android:id="@+id/iv_userYearsPractice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userCountryProfile"
+                    android:layout_centerHorizontal="true"
+                    app:srcCompat="@drawable/heart" />
+
+                <TextView
+                    android:id="@+id/tv_userYearsPractice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userCountryProfile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/iv_userYearsPractice" />
+
+                <TextView
+                    android:id="@+id/tv_userYearsPractice1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_userYearsPractice"
+                    android:layout_toRightOf="@id/iv_userYearsPractice"
+                    android:text="@string/yearsPractice" />
+
+                <ImageView
+                    android:id="@+id/iv_userScoreCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userCountryProfile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/tv_userYearsPractice1"
+                    app:srcCompat="@drawable/view" />
+
+                <TextView
+                    android:id="@+id/tv_userScoreCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/userCountryProfile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/iv_userScoreCount" />
+
+                <TextView
+                    android:id="@+id/tv_userScoreCount1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userScoreCount"
+                    android:layout_centerHorizontal="true"
+                    android:layout_toRightOf="@id/iv_userScoreCount"
+                    android:text="рейтинг" />
+
+                <Button
+                    android:id="@+id/btn_verifyProfile"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_userYearsPractice1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="6dp"
+                    android:background="@drawable/btn_verify"
+                    android:text="Подтвердить профиль"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="12sp" />
+
+                <Button
+                    android:id="@+id/btn_editProfile"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/btn_verifyProfile"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="14dp"
+                    android:background="@drawable/btn_edit"
+                    android:text="Редактировать Профиль"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_userAbout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/basic_data"
+                android:layout_margin="14dp" >
+
+                <TextView
+                    android:id="@+id/tv_userAbout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="О себе"
+                    android:textColor="@android:color/background_dark" />
+
+                <TextView
+                    android:id="@+id/tv_userAboutText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userAbout" />
+
+                <Button
+                    android:id="@+id/btn_aboutEdit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/tv_userAbout"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_action_create" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_education"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_userAbout"
+                android:layout_margin="14dp">
+
+                <TextView
+                    android:id="@+id/tv_userEducation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="Образование"
+                    android:textColor="@android:color/background_dark" />
+
+                <TextView
+                    android:id="@+id/tv_userEducationOrganization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userEducation"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@android:color/holo_blue_light" />
+
+                <TextView
+                    android:id="@+id/tv_userEducationDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userEducationOrganization"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_userEducationDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userEducationDate"
+                    android:layout_marginBottom="6dp" />
+
+                <Button
+                    android:id="@+id/btn_educationEdit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/tv_userEducation"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_action_create" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_careers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_education"
+                android:layout_margin="14dp" >
+
+                <TextView
+                    android:id="@+id/tv_userCareer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="Карьера"
+                    android:textColor="@android:color/background_dark" />
+
+                <TextView
+                    android:id="@+id/tv_userCareerOrganization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userCareer"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@android:color/holo_blue_light" />
+
+                <TextView
+                    android:id="@+id/tv_userWorkPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userCareerOrganization"
+                    android:layout_marginBottom="6dp" />
+
+                <Button
+                    android:id="@+id/btn_careersEdit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/tv_userCareer"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_action_create" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_achievements"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_careers"
+                android:layout_margin="14dp" >
+
+                <TextView
+                    android:id="@+id/tv_userAchievement"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="Достижения"
+                    android:textColor="@android:color/background_dark" />
+
+                <TextView
+                    android:id="@+id/tv_userAchievementText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userAchievement" />
+
+                <Button
+                    android:id="@+id/btn_achievementsEdit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/tv_userAchievement"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_action_create" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_contacts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_achievements"
+                android:layout_margin="14dp" >
+
+                <TextView
+                    android:id="@+id/tv_userContacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="Контакты"
+                    android:textColor="@android:color/background_dark" />
+
+                <TextView
+                    android:id="@+id/tv_userContactsType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userContacts" />
+
+                <TextView
+                    android:id="@+id/tv_userContactsValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userContactsType"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@android:color/holo_blue_light" />
+
+                <Button
+                    android:id="@+id/btn_contactsEdit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/tv_userContacts"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_action_create" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_languages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_contacts"
+                android:layout_margin="14dp" >
+
+                <TextView
+                    android:id="@+id/tv_userLanguages"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="Языки"
+                    android:textColor="@android:color/background_dark" />
+
+                <TextView
+                    android:id="@+id/tv_userLanguagesCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userLanguages"
+                    android:layout_marginBottom="6dp" />
+
+                <Button
+                    android:id="@+id/btn_languagesEdit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/tv_userLanguages"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_action_create" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_schedule"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_languages"
+                android:layout_margin="14dp"
+                android:background="@drawable/basic_data" >
+
+                <TextView
+                    android:id="@+id/tv_userSchedule"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="6dp"
+                    android:text="График Приёма"
+                    android:textColor="@android:color/background_dark" />
+
+                <TextView
+                    android:id="@+id/tv_userScheduleOrganization"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userSchedule"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@android:color/holo_blue_light" />
+
+                <TextView
+                    android:id="@+id/tv_monday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userScheduleOrganization"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Пн" />
+
+                <TextView
+                    android:id="@+id/tv_mondayHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_userScheduleOrganization"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_tuesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_monday"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Вт" />
+
+                <TextView
+                    android:id="@+id/tv_tuesdayHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_mondayHours"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_wednesday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tuesday"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Ср" />
+
+                <TextView
+                    android:id="@+id/tv_wednesdayHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tuesdayHours"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_thursday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wednesday"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Чт" />
+
+                <TextView
+                    android:id="@+id/tv_thursdayHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_wednesdayHours"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp" />
+
+
+                <TextView
+                    android:id="@+id/tv_friday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_thursday"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Пт" />
+
+                <TextView
+                    android:id="@+id/tv_fridayHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_thursdayHours"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_saturday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_friday"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Сб" />
+
+                <TextView
+                    android:id="@+id/tv_saturdayHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_fridayHours"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_sunday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_saturday"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Вс" />
+
+                <TextView
+                    android:id="@+id/tv_sundayHours"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_saturdayHours"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp" />
+
+                <TextView
+                    android:id="@+id/tv_userPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sunday"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginBottom="6dp"
+                    android:text="Телефон:"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/tv_userPhoneValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_sundayHours"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="6dp"
+                    android:textColor="@android:color/holo_blue_light" />
+
+                <Button
+                    android:id="@+id/btn_scheduleEdit"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignTop="@+id/tv_userSchedule"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/ic_action_create" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_aboutYakdu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_schedule"
+                android:layout_margin="14dp" >
+
+                <TextView
+                    android:id="@+id/tv_aboutYakdu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="85dp"
+                    android:text="О Yakdu" />
+
+                <TextView
+                    android:id="@+id/tv_termsOfUse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_toRightOf="@+id/tv_aboutYakdu"
+                    android:text="Условия пользования" />
+
+                <TextView
+                    android:id="@+id/tv_privacyPolicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_aboutYakdu"
+                    android:text="Политика конфиденциальности"
+                    android:layout_marginLeft="85dp" />
+
+                <TextView
+                    android:id="@+id/tv_vacancy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_privacyPolicy"
+                    android:layout_marginLeft="85dp"
+                    android:text="Вакансии" />
+
+                <TextView
+                    android:id="@+id/tv_contacts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_privacyPolicy"
+                    android:layout_toRightOf="@+id/tv_vacancy"
+                    android:layout_marginLeft="13dp"
+                    android:text="Контакты" />
+
+                <TextView
+                    android:id="@+id/tv_help"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_privacyPolicy"
+                    android:layout_toRightOf="@+id/tv_contacts"
+                    android:layout_marginLeft="13dp"
+                    android:text="Помощь" />
+
+                <TextView
+                    android:id="@+id/tv_copyright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_vacancy"
+
+                    android:layout_marginTop="12dp"
+                    android:layout_marginLeft="140dp"
+                    android:text="Yakdu (c) 2018"/>
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

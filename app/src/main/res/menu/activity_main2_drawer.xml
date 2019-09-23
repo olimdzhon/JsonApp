@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_feed"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/feed_item" />
+        <item
+            android:id="@+id/nav_message_users"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/message_users_item" />
+        <item
+            android:id="@+id/nav_notification_page"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/notification_page_item" />
+        <item
+            android:id="@+id/nav_appointments"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/appointments_item" />
+        <item
+            android:id="@+id/nav_patients"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/patients_item" />
+        <item
+            android:id="@+id/nav_communities"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/communities_item" />
+        <item
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/events_item" />
+        <item
+            android:id="@+id/nav_calendar"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/calendar_item" />
+        <item
+            android:id="@+id/nav_patient_posts"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/patient_posts_item" />
+        <item
+            android:id="@+id/nav_medic_posts"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/medic_posts_item" />
+        <item
+            android:id="@+id/nav_conciliums"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/conciliums_item" />
+        <item
+            android:id="@+id/nav_papers"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/papers_item" />
+        <item
+            android:id="@+id/nav_protocols"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/protocols_item" />
+        <item
+            android:id="@+id/nav_questions"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/questions_item" />
+        <item
+            android:id="@+id/nav_specializations"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/specializations_item" />
+        <item
+            android:id="@+id/nav_clinics"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/clinics_item" />
+        <item
+            android:id="@+id/nav_favorites"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/favorites_item" />
+        <item
+            android:id="@+id/nav_settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/settings_item" />
+        <item
+            android:id="@+id/nav_adminPanel"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/adminPanel_item" />
+    </group>
+    <item android:title="@string/communicate_item">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="@string/share_item" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/send_item" />
+            <item
+                android:id="@+id/nav_exit"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/exit_item" />
+        </menu>
+    </item>
+</menu>

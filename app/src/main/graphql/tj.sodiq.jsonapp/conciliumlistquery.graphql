@@ -1,0 +1,36 @@
+query ConciliumListQuery($filter: ConciliumFilter) {
+    count: conciliumsCount(filter: $filter)
+    conciliums(filter: $filter) {
+        id
+        __typename
+        name
+        text
+        createdDate
+        author {
+            id
+            __typename
+            firstName
+            middleName
+            secondName
+            identicon
+            profileType
+            gender
+            active
+            photo {
+                id
+                name
+                filename
+            }
+        }
+        tags {
+            id
+            __typename
+            name
+            conceptId
+            conceptType
+        }
+        score
+        scoreByCurrentUser
+        commentsCount
+    }
+}

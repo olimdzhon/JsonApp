@@ -1,0 +1,632 @@
+query ActivityNewsListQuery($filter: ActivityFilter!) {
+        tip {
+            id
+            module
+        }
+        activitiesCount(filter: $filter)
+        activities(filter: $filter) {
+            id
+            action
+            date
+            authorId
+            unitType
+            communityId
+            eventId
+            author {
+                id
+                __typename
+                firstName
+                secondName
+                gender
+                profileType
+                active
+                profile {
+                    specializations {
+                        id
+                        name
+                        __typename
+                    }
+                    degree
+                }
+            }
+            event {
+                id
+                name
+                __typename
+            }
+            community {
+                id
+                name
+                __typename
+            }
+            unit {
+                ... on Question {
+                    id
+                    name
+                    __typename
+                    text
+                    answersCount
+                    author {
+                        id
+                        name
+                        __typename
+                    }
+                    answeredByCurrentUser
+                    followByCurrentUser
+                    favoriteByCurrentUser
+                    preloadedAnswers {
+                        id
+                        text
+                        score
+                        commentsCount
+                        __typename
+                        author {
+                            id
+                            firstName
+                            secondName
+                            profileType
+                            gender
+                            active
+                            __typename
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                }
+                ... on MedicPost {
+                    id
+                    name
+                    __typename
+                    text
+                    score
+                    watch
+                    scoreByCurrentUser
+                    followByCurrentUser
+                    favoriteByCurrentUser
+                    watchByCurrentUser
+                    commentsCount
+                    cover {
+                        filename
+                    }
+                    author {
+                        id
+                        __typename
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                    attachFiles {
+                        filename
+                        fileType
+                    }
+                }
+                ... on PatientPost {
+                    id
+                    name
+                    __typename
+                    text
+                    score
+                    watch
+                    followByCurrentUser
+                    favoriteByCurrentUser
+                    scoreByCurrentUser
+                    watchByCurrentUser
+                    commentsCount
+                    cover {
+                        filename
+                    }
+                    author {
+                        id
+                        __typename
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                    attachFiles {
+                        filename
+                        fileType
+                    }
+                }
+                ... on Concilium {
+                    id
+                    name
+                    __typename
+                    text
+                    score
+                    watch
+                    followByCurrentUser
+                    favoriteByCurrentUser
+                    scoreByCurrentUser
+                    watchByCurrentUser
+                    commentsCount
+                    author {
+                        id
+                        __typename
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                    attachFiles {
+                        filename
+                        fileType
+                    }
+                }
+                ... on Paper {
+                    id
+                    name
+                    __typename
+                    annotation
+                    paperType
+                    paperAuthors
+                    publishDay
+                    publishMonth
+                    publishYear
+                    score
+                    watch
+                    scoreByCurrentUser
+                    watchByCurrentUser
+                    followByCurrentUser
+                    favoriteByCurrentUser
+                    commentsCount
+                    author {
+                        id
+                        __typename
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                }
+                ... on Protocol {
+                    id
+                    name
+                    __typename
+                    annotation
+                    day
+                    month
+                    year
+                    score
+                    watch
+                    followByCurrentUser
+                    favoriteByCurrentUser
+                    scoreByCurrentUser
+                    watchByCurrentUser
+                    commentsCount
+                    author {
+                        id
+                        __typename
+                    }
+                    region {
+                        id
+                        name
+                        __typename
+                    }
+                    attachFile {
+                        filename
+                        fileType
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                }
+                ... on Photo {
+                    id
+                    name
+                    __typename
+                    filename
+                    description
+                    score
+                    watch
+                    followByCurrentUser
+                    scoreByCurrentUser
+                    watchByCurrentUser
+                    commentsCount
+                    author {
+                        id
+                        __typename
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                }
+                ... on Video {
+                    id
+                    name
+                    __typename
+                    filename
+                    description
+                    duration
+                    score
+                    watch
+                    followByCurrentUser
+                    scoreByCurrentUser
+                    watchByCurrentUser
+                    commentsCount
+                    author {
+                        id
+                        __typename
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                }
+                ... on File {
+                    id
+                    name
+                    description
+                    __typename
+                    filename
+                    followByCurrentUser
+                    score
+                    scoreByCurrentUser
+                    commentsCount
+                    author {
+                        id
+                        __typename
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                }
+                ... on Vote {
+                    id
+                    name
+                    description
+                    __typename
+                    isMultiOption
+                    followByCurrentUser
+                    isClosed
+                    votesCount
+                    isAllowToAdd
+                    author {
+                        id
+                        __typename
+                    }
+                    answers {
+                        id
+                        text
+                        isVotedBySessionUser
+                        voteUsersCount
+                    }
+                    score
+                    scoreByCurrentUser
+                    commentsCount
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                }
+                ... on Community {
+                    id
+                    name
+                    __typename
+                    privacy
+                    imageCover
+                    membersCount
+                    membershipStatus
+                    isSessionUserSubscribed
+                    authorId
+                    author {
+                        id
+                        __typename
+                    }
+                    attachFile {
+                        id
+                        filename
+                        name
+                        __typename
+                    }
+                }
+                ... on Event {
+                    id
+                    name
+                    __typename
+                    privacy
+                    imageCover
+                    startDate
+                    endDate
+                    membershipStatus
+                    isSessionUserSubscribed
+                    authorId
+                    membersCount
+                    city {
+                        name
+                    }
+                    author {
+                        id
+                        name
+                    }
+                    attachFile {
+                        id
+                        filename
+                        name
+                        __typename
+                    }
+                }
+                ... on Note {
+                    id
+                    __typename
+                    name
+                    text
+                    score
+                    authorId
+                    scoreByCurrentUser
+                    commentsCount
+                    author {
+                        id
+                        __typename
+                    }
+                    comments {
+                        id
+                        text
+                        __typename
+                        repliesCount
+                        createdDate
+                        scoreByCurrentUser
+                        score
+                        author {
+                            id
+                            __typename
+                            firstName
+                            secondName
+                            gender
+                            profileType
+                            active
+                            photo {
+                                filename
+                            }
+                            profile {
+                                specializations {
+                                    id
+                                    name
+                                    __typename
+                                }
+                                degree
+                            }
+                        }
+                    }
+                }
+            }
+        }
+}

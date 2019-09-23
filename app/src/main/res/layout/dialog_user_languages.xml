@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main2Activity">
+
+    <RelativeLayout
+        android:id="@+id/rl_languagesEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/etLanguagesCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Язык" />
+
+        <EditText
+            android:id="@+id/etLanguagesLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etLanguagesCode"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Уровень владения" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_addLnBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_languagesBtn">
+
+        <TextView
+            android:id="@+id/tvLnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text=" + Добавить еще "
+            android:textColor="@android:color/holo_blue_light"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_languagesBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/action_cancelLn"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:id="@+id/action_okLn"
+            android:background="@drawable/btn_verify"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отмена"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:id="@+id/action_cancelLn"
+            android:background="@drawable/btn_edit"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

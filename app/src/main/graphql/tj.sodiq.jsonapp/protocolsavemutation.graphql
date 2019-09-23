@@ -1,0 +1,5 @@
+mutation ProtocolSaveMutation($protocol: ProtocolSaveArgs, $attachFile: AttachFileDraft) {
+    protocol: protocolSave(protocol: $protocol, attachFile: $attachFile) {
+        id
+    }
+}

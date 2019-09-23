@@ -1,0 +1,46 @@
+query ConciliumQuery($id: Int) {
+    concilium(id: $id) {
+        id
+        name
+        __typename
+        text
+        createdDate
+        author {
+            id
+            __typename
+            firstName
+            secondName
+            middleName
+            identicon
+            profileType
+            gender
+            active
+            photo {
+                id
+                name
+                filename
+            }
+        }
+        tags {
+            id
+            name
+            __typename
+            conceptId
+            conceptType
+        }
+        attachFiles {
+            id
+            filename
+            fileType
+        }
+        score
+        scoreByCurrentUser
+        favorite
+        favoriteByCurrentUser
+        follow
+        followByCurrentUser
+        watch
+        watchByCurrentUser
+        commentsCount
+    }
+}

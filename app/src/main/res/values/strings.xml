@@ -1,0 +1,70 @@
+<resources>
+    <string name="app_name">Yakdu</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Yakdu</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <string name="profile_item">Мой профиль</string>
+    <string name="message_users_item">Сообщение</string>
+    <string name="notification_page_item">Уведомления</string>
+    <string name="appointments_item">Запись на приём</string>
+    <string name="patients_item">Пациенты</string>
+    <string name="communities_item">Сообщества</string>
+    <string name="events_item">Мероприятия</string>
+    <string name="calendar_item">Календарь</string>
+    <string name="patient_posts_item">Советы врачей</string>
+    <string name="medic_posts_item">Клинические случаи</string>
+    <string name="conciliums_item">Консилиумы</string>
+    <string name="questions_item">Вопросы</string>
+    <string name="specializations_item">Поиск врачей</string>
+    <string name="clinics_item">Клиники</string>
+    <string name="papers_item">Научные работы</string>
+    <string name="protocols_item">Протоколы</string>
+    <string name="favorites_item">Избранные</string>
+
+    <string name="exit_item">Выход</string>
+
+    <string name="communicate_item">Обратная связь</string>
+    <string name="share_item">Поделиться</string>
+    <string name="send_item">Отправить</string>
+    <string name="preference_file_key">Idiot</string>
+    <string name="yearsPractice">лет практики</string>
+    <string name="LoadPicture">Загрузите фотографию или выберите из существующих фотографий.</string>
+    <string name="settings_item">Настройки</string>
+    <string name="adminPanel_item">Админ панель</string>
+    <string name="feed_item">Лента новостей</string>
+    <string name="johnCena">John Cena</string>
+    <string name="randyOrton">Randy Orton</string>
+    <string name="romanReigns">Roman Reigns</string>
+    <string name="goldBerg">Gold Berg</string>
+    <string name="sheamus">Sheamus</string>
+    <string name="analogClock">Analog Clock</string>
+    <string name="digitalClock">Digital Clock</string>
+    <string name="chronometerInAndroid">Chronometer In Android</string>
+    <string name="start">Start</string>
+    <string name="stop">Stop</string>
+    <string name="restart">Restart</string>
+    <string name="setFormat">Set Format</string>
+    <string name="clearFormat">Clear Format</string>
+
+
+    <string name="title_activity_my">MyActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_contact">ContactActivity</string>
+    <string name="start_timer">Start Timer</string>
+    <string name="exit">Exit</string>
+    <string name="click_over_button_to_exit">Click Over Button To Exit</string>
+    <string name="title_activity_message_view">MessageViewActivity</string>
+    <string name="menuDeleteChat">Удалить чат</string>
+</resources>

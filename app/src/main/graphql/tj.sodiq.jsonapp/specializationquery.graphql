@@ -1,0 +1,25 @@
+query SpecializationQuery($id: Int) {
+    specialization(id: $id) {
+        id
+        name
+        description
+        __typename
+        tag {
+            id
+            name
+            __typename
+        }
+        photo {
+            id
+            name
+            filename
+            fileType
+        }
+        cover {
+            id
+            name
+            filename
+            fileType
+        }
+    }
+}

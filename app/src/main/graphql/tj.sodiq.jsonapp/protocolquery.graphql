@@ -1,0 +1,70 @@
+query ProtocolQuery($id: Int) {
+    protocol(id: $id) {
+        id
+        __typename
+        name
+        regionId
+        region {
+            id
+            name
+            shortName
+            staticType
+            __typename
+        }
+        day
+        month
+        year
+        annotation
+        attachFile {
+            id
+            name
+            filename
+        }
+        author {
+            id
+            __typename
+            firstName
+            middleName
+            secondName
+            identicon
+            profileType
+            gender
+            active
+            photo {
+                id
+                name
+                filename
+            }
+        }
+        humanParameters {
+            id
+            name
+            __typename
+            shortName
+            subtype
+            parameterType
+        }
+        bodyStates {
+            id
+            name
+            shortName
+            __typename
+        }
+        tags {
+            id
+            name
+            __typename
+            conceptId
+            conceptType
+        }
+        score
+        scoreByCurrentUser
+        watch
+        watchByCurrentUser
+        favorite
+        favoriteByCurrentUser
+        follow
+        followByCurrentUser
+        commentsCount
+    }
+}

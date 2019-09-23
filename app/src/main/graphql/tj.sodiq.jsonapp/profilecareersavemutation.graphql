@@ -1,0 +1,27 @@
+mutation ProfileCareerSaveMutation($careers: [ProfileCareerSaveArgs], $removeCareerIds: [Int]) {
+    profileCareers: profileCareerSave(careers: $careers) {
+        id
+        dateFrom
+        dateTo
+        clinicId
+        tillNow
+        description
+        exactLocation
+        workPosition
+        department
+        organization
+        clinic {
+            id
+            name
+            __typename
+            tag {
+                id
+                name
+                __typename
+                conceptId
+                conceptType
+            }
+        }
+    }
+    profileCareerBulkDelete(removeCareerIds: $removeCareerIds)
+}

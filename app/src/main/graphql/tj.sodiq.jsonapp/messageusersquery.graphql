@@ -1,0 +1,23 @@
+query MessageUsersQuery($filter: UserFilter!) {
+    messageUsers(filter: $filter) {
+        user {
+            id
+            firstName
+            secondName
+            __typename
+            identicon
+            profileType
+            gender
+            active
+            photo {
+                filename
+            }
+        }
+        lastMessage {
+            id
+            createdDate
+            text
+        }
+        unreadCount
+    }
+}

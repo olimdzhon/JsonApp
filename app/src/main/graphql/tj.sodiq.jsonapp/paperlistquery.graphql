@@ -1,0 +1,40 @@
+query PaperListQuery($filter: PaperFilterArgs) {
+    count: papersCount(filter: $filter)
+    papers(filter: $filter) {
+        id
+        name
+        __typename
+        paperAuthors
+        annotation
+        publishDay
+        publishMonth
+        publishYear
+        createdDate
+        author {
+            id
+            firstName
+            middleName
+            secondName
+            __typename
+            identicon
+            profileType
+            gender
+            active
+            photo {
+                id
+                name
+                filename
+            }
+        }
+        tags {
+            id
+            name
+            __typename
+            conceptId
+            conceptType
+        }
+        score
+        scoreByCurrentUser
+        commentsCount
+    }
+}

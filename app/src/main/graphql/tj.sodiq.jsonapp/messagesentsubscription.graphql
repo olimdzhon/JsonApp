@@ -1,0 +1,11 @@
+subscription MessageSentSubscription {
+    messageSent {
+        id
+        createdDate
+        text
+        status
+        ownerId
+        receiverId
+        isSender
+    }
+}

@@ -1,0 +1,3 @@
+mutation PatientPostDeleteMutation($id: Int!) {
+    patientPostDelete(id: $id)
+}

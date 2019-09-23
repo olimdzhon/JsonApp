@@ -1,0 +1,38 @@
+query PatientPostListQuery($filter: PatientPostFilter) {
+    count: patientPostsCount(filter: $filter)
+    patientPosts(filter: $filter) {
+        id
+        __typename
+        name
+        text
+        createdDate
+        author {
+            id
+            __typename
+            firstName
+            middleName
+            secondName
+            identicon
+            profileType
+            photo {
+                id
+                name
+                filename
+            }
+        }
+        tags {
+            id
+            __typename
+            name
+            conceptId
+            conceptType
+        }
+        cover {
+            id
+            filename
+            __typename
+        }
+        score
+        watch
+    }
+}

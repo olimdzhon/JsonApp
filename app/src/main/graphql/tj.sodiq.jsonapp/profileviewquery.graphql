@@ -1,0 +1,161 @@
+query ProfileViewQuery($id: Int!) {
+    user(id: $id) {
+        id
+        name
+        firstName
+        secondName
+        middleName
+        identicon
+        profileType
+        active
+        gender
+        myMedicPatientStatus
+        status
+        livingRegionId
+        rejectMessage
+        livingRegion {
+            id
+            name
+            country {
+                name
+            }
+        }
+        photo {
+            filename
+        }
+        profile {
+            id
+            userId
+            about
+            scoreCount
+            scoreByCurrentUser
+            practiceYears
+            degree
+            rank
+            category
+            isPhoneEnabled
+            isOnlineEnabled
+            phoneNumber
+            __typename
+            achievements {
+                id
+                name
+                attachFile {
+                    id
+                    name
+                    filename
+                    fileType
+                }
+            }
+            contacts {
+                id
+                contactType
+                valueType
+                value
+            }
+            careers {
+                id
+                dateFrom
+                dateTo
+                clinicId
+                tillNow
+                description
+                exactLocation
+                workPosition
+                department
+                organization
+                attachFile {
+                    id
+                    name
+                    filename
+                    fileType
+                }
+                city {
+                    name
+                }
+                clinic {
+                    id
+                    name
+                    officialName
+                    __typename
+                    latitude
+                    longitude
+                    address
+                    departments
+                    tag {
+                        id
+                        name
+                        __typename
+                        conceptId
+                        conceptType
+                    }
+                }
+                schedules {
+                    id
+                    careerId
+                    dayOfWeek
+                    registerDate
+                    finishDate
+                }
+            }
+            educations {
+                id
+                dateFrom
+                dateTo
+                tillNow
+                description
+                field
+                organization
+                attachFile {
+                    id
+                    name
+                    filename
+                    fileType
+                }
+            }
+            clinicServices {
+                id
+                currency
+                price
+                clinic {
+                    id
+                    name
+                    alternativeNames
+                }
+                medicalService {
+                    category {
+                        id
+                        name
+                    }
+                }
+                specialists {
+                    address
+                }
+            }
+            qualities {
+                unitId
+                unitType
+                name
+                authorId
+                count
+            }
+            specializations {
+                id
+                name
+                __typename
+            }
+            profileLanguages {
+                id
+                level
+                code
+            }
+        }
+        livingRegion {
+            id
+            name
+            country {
+                name
+            }
+        }
+    }
+}

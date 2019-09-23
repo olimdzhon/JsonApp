@@ -1,0 +1,33 @@
+query MessageListQuery($filter: MessageFilter!) {
+    count: messagesCount(filter: $filter)
+    messages(filter: $filter) {
+        id
+        createdDate
+        text
+        status
+        ownerId
+        receiverId
+        isSender
+        owner {
+            id
+            identicon
+            photo {
+                filename
+            }
+        }
+        receiver {
+            id
+            identicon
+            firstName
+            secondName
+            photo {
+                filename
+            }
+        }
+        attachFiles {
+            name
+            filename
+            fileType
+        }
+    }
+}

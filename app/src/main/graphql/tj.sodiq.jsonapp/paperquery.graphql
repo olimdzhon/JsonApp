@@ -1,0 +1,51 @@
+query PaperQuery($id: Int) {
+    paper(id: $id) {
+        id
+        name
+        __typename
+        paperType
+        paperAuthors
+        annotation
+        publishDay
+        publishMonth
+        publishYear
+        createdDate
+        author {
+            id
+            firstName
+            middleName
+            secondName
+            __typename
+            identicon
+            profileType
+            gender
+            active
+            photo {
+                id
+                name
+                filename
+            }
+        }
+        tags {
+            id
+            name
+            __typename
+            conceptId
+            conceptType
+        }
+        attachFile {
+            id
+            name
+            filename
+        }
+        score
+        scoreByCurrentUser
+        commentsCount
+        follow
+        followByCurrentUser
+        favorite
+        favoriteByCurrentUser
+        watch
+        watchByCurrentUser
+    }
+}

@@ -1,0 +1,13 @@
+mutation MedicPostSaveMutation($medicPost: MedicPostSaveArgs) {
+    medicPost: medicPostSave(medicPost: $medicPost) {
+        id
+        name
+        text
+        tags {
+            id
+            name
+            conceptId
+            conceptType
+        }
+    }
+}

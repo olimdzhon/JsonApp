@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Main2Activity">
+
+    <RelativeLayout
+        android:id="@+id/rl_educationEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/etEducationOrganization"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Учебное заведение" />
+
+        <EditText
+            android:id="@+id/etSpecializationOrFaculty"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEducationOrganization"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Специальность/факультет" />
+
+        <EditText
+            android:id="@+id/etEdDateFrom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etSpecializationOrFaculty"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Год начала" />
+
+        <CheckBox
+            android:id="@+id/cbEdUntilToday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEdDateFrom"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:text="По настоящее время" />
+
+        <EditText
+            android:id="@+id/etEdDateTo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/cbEdUntilToday"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Год окончания" />
+
+        <EditText
+            android:id="@+id/etEdDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEdDateTo"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:hint="Описание" />
+
+        <TextView
+            android:id="@+id/ivEdImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etEdDescription"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp"
+            android:hint="Прикрепить изображение"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_addEdBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_educationBtn">
+
+        <TextView
+            android:id="@+id/tvEdAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:text=" + Добавить еще "
+            android:textColor="@android:color/holo_blue_light"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_educationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/action_cancelEd"
+            android:layout_marginRight="10dp"
+            android:textSize="14sp"
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:id="@+id/action_okEd"
+            android:background="@drawable/btn_verify"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Отмена"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:textAlignment="center"
+            android:id="@+id/action_cancelEd"
+            android:background="@drawable/btn_edit"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

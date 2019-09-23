@@ -1,0 +1,3 @@
+mutation ProtocolDeleteMutation($id: Int!) {
+    protocolDelete(id: $id)
+}

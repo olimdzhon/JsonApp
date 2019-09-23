@@ -1,0 +1,49 @@
+query PatientPostQuery($id: Int) {
+    patientPost(id: $id) {
+        id
+        name
+        __typename
+        text
+        createdDate
+        cover {
+            id
+            filename
+            __typename
+        }
+        author {
+            id
+            __typename
+            firstName
+            secondName
+            middleName
+            identicon
+            profileType
+            photo {
+                id
+                name
+                filename
+            }
+        }
+        tags {
+            id
+            name
+            __typename
+            conceptId
+            conceptType
+        }
+        attachFiles {
+            id
+            filename
+            fileType
+        }
+        score
+        scoreByCurrentUser
+        watch
+        favorite
+        follow
+        commentsCount
+        followByCurrentUser
+        favoriteByCurrentUser
+        watchByCurrentUser
+    }
+}

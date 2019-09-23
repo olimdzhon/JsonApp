@@ -1,0 +1,19 @@
+mutation AuthorizationQuery($authorizationArgs: AuthorizationArgs!) {
+    sessionUser: authorization(authorizationArgs: $authorizationArgs) {
+        userId
+        accountId
+        profileType
+        lastActiveTime
+        isLongSession
+        name
+        identicon
+        isModerator
+        isDeveloper
+        isVerified
+        lastVerificationRequest
+        photo {
+            id
+            filename
+        }
+    }
+}

@@ -1,0 +1,46 @@
+mutation ProfileScheduleSaveMutation($profile: ProfileSaveArgs!, $schedules: [ScheduleSaveArgs!]!, $scheduleIds: [Int]) {
+    profile(profileSaveArgs: $profile) {
+        id
+    }
+    profileCareerSave: userScheduleSave(schedules: $schedules) {
+        id
+        dateFrom
+        dateTo
+        clinicId
+        tillNow
+        description
+        exactLocation
+        workPosition
+        department
+        organization
+        attachFile {
+            filename
+        }
+        city {
+            name
+        }
+        clinic {
+            id
+            name
+            __typename
+            latitude
+            longitude
+            address
+            tag {
+                id
+                name
+                __typename
+                conceptId
+                conceptType
+            }
+        }
+        schedules {
+            id
+            careerId
+            dayOfWeek
+            registerDate
+            finishDate
+        }
+    }
+    userScheduleBulkDelete(scheduleIds: $scheduleIds)
+}
